@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="col-lg-6 offset-lg-3   bg-warning">
+  <form class="custom-centered" method="POST" action="/addrecord/">
+   {% csrf_token %}
+
+                  <div class="form-group mx-5">
+                       <div >
+                         <label for="roll">Rollno:</label>
+                         <input type="number" name="rollno" class="form-control" id="roll"  placeholder="Rollno">
+                       </div>
+                  </div>
+                 <div class="form-group mx-5">
+                       <div >
+                          <label for="naam">Name</label>
+                          <input type="text" name="name" class="form-control" id="naam" placeholder="name">
+                       </div>
+                 </div>
+               <div class="form-group mx-5">
+                    <div >
+                      <label for="fees">Fee</label>
+                      <input type="number" name="fee" class="form-control" id="fees"  placeholder="Enter Fee">
+                    </div>
+               </div>
+              <div class="form-group mx-5">
+                    <div >
+                       <label for="cont">Contact</label>
+                       <input type="number" name="contact" class="form-control" id="cont" placeholder="contact number">
+                    </div>
+              </div>
+              <center><button type="submit" class="btn btn-primary">Submit</button></center>
+
+
+
+
+  </form>
+  </div>
+{% endblock %}
